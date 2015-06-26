@@ -27,8 +27,9 @@ module.exports = function(moduleName, opts) {
       var lines = contents.toString().split('\n');
       var filesToLoad = lines.filter(function(l) { return l; })
         .map(function(line) {
-          return line.match(/path="(.*)"/)[1];
-        });
+          var match = line.match(/path="(.*)"/);
+          return match && match[1];
+        }).filter(function(l) { return l; });
 
       var buffer = [];
 
