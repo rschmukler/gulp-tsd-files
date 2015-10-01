@@ -1,4 +1,9 @@
 
+0.1.2 / 2015-10-01
+==================
+
+  * fix issue where done wouldn't get called with no nested files to load
+
 0.1.1 / 2015-06-26
 ==================
 
