@@ -34,6 +34,7 @@ module.exports = function(moduleName, opts) {
       var buffer = [];
 
       var pending = filesToLoad.length;
+      if (!pending) return done();
       filesToLoad.forEach(function(file) {
         fs.readFile('typings/' + file, addToBuffer);
       });
